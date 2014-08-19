@@ -25,8 +25,8 @@
 			}
 			
 			function create(){
-				character = new Phaser.Rectangle(370, 270, 60, 60);
-				mario = game.add.sprite(100, 100, 'mario');
+				//character = new Phaser.Rectangle(370, 270, 60, 60);
+				mario = game.add.sprite(100, 100, 'mario',350,250);
 				mario.anchor.setTo(5,5);
 				
 				cursors = game.input.keyboard.createCursorKeys();
@@ -42,13 +42,13 @@
 				else if(cursors.right.isDown === true){
 					mario.x += 1.5;				
 				}
-				else if(cursors.left.isDown === true && mario.x > 0){
+				else if(cursors.left.isDown === true && mario.x > 100){
 					mario.x -= 1.5;				
 				}					
 			}
 			
 			function render(){
-				game.debug.geom(character,'#ffffff');
+				//game.debug.geom(character,'#ffffff');
 			}
 		};
 	</script>
