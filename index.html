@@ -51,17 +51,20 @@
 			
 			function update(){
 				if(cursors.up.isDown === true){
-					mario.y += 1.5;
+					mario.y -= 1.5;
 				}
 				else if(cursors.down.isDown === true){
-					mario.y -= 1.5;				
+					mario.y += 1.5;				
 				}
 				else if(cursors.right.isDown === true){
 					mario.x += 1.5;				
 				}
 				else if(cursors.left.isDown === true && mario.x > 100){
 					mario.x -= 1.5;				
-				}					
+				}	
+				else if(corsors.spaceKey.isDown === true){
+				
+				}
 			
 			}
 						
@@ -70,10 +73,10 @@
 			}
 			
 			function moveUp(){
-				mario.y+=10;
+				mario.y-=10;
 			}
 			function moveDown(){
-				mario.y-=10;
+				mario.y+=10;
 			}
 			function moveLeft(){
 				mario.x-=10;
