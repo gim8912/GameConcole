@@ -19,15 +19,16 @@
 			var mario;
 			var cursors;
 			
-			var moveButton[4];
+			var moveButton;
 
 			
 			function preload(){
 				game.load.image('mario', 'assets/mario.png');
+				game.load.image('up', 'assets/up.png' );
+				game.load.image('down', 'assets/down.png' );
+				game.load.image('left', 'assets/left.png' );
+				game.load.image('right', 'assets/right.png' );
 				
-				for(var i=0 ; i<4 ; i++){
-					game.load.image('move'+i, i);
-				}
 			}
 			
 			function create(){
@@ -36,10 +37,10 @@
 				mario.anchor.setTo(1,1);
 				mario.y = 230;
 				
-				moveButton[1] = game.add.sprite(100, 100, move1);
-				moveButton[1] = game.add.sprite(100, 100, move2);
-				moveButton[1] = game.add.sprite(100, 100, move3);
-				moveButton[1] = game.add.sprite(100, 100, move4);
+				moveButton[0] = game.add.sprite(50, 50, 'up');
+				moveButton[1] = game.add.sprite(50, 50, 'down');
+				moveButton[2] = game.add.sprite(50, 50, 'lift');
+				moveButton[3] = game.add.sprite(50, 50, 'right');
 				
 				
 				cursors = game.input.keyboard.createCursorKeys();
