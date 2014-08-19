@@ -2,14 +2,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Simple Game Console</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://cdnjscn.b0.upaiyun.com/libs/phaser/2.0.6/phaser.min.js"></script>
 	<script src="script.js"></script>
 </head>
 <body>
-	<h1>Hello</h1>
+	
+	<script type="text/javascript">
+		window.onload = function() {
+			var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload: preload, create: create
+				,render: render});
+			var character;		
+			var mario;
+			
+			function preload(){
+				game.load.image('mario', 'assets/mario.png');
+			}
+			
+			function create(){
+				character = new Phaser.Rectangle(370, 270, 60, 60);
+				mrio = game.add.sprite(100, 100, 'mario');
+			}
+			
+			function render(){
+				game.debug.geom(character,'#ffffff');
+				}
+		};
+	</script>
+		
 	
 </body>
 </html>
