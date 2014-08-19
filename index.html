@@ -26,8 +26,8 @@
 			
 			function create(){
 				//character = new Phaser.Rectangle(370, 270, 60, 60);
-				mario = game.add.sprite(100, 100, 'mario',350,250);
-				mario.anchor.setTo(5,5);
+				mario = game.add.sprite(100, 100, 'mario');
+				mario.anchor.setTo(350,250);
 				
 				cursors = game.input.keyboard.createCursorKeys();
 			}
@@ -48,7 +48,7 @@
 			}
 			
 			function render(){
-				//game.debug.geom(character,'#ffffff');
+				game.debug.geom(character,'#ffffff');
 			}
 		};
 	</script>
