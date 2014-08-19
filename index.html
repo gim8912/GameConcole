@@ -27,7 +27,7 @@
 			function create(){
 				character = new Phaser.Rectangle(370, 270, 60, 60);
 				mario = game.add.sprite(100, 100, 'mario');
-				mario.anchor.setTo(1,1);
+				mario.anchor.setTo(5,5);
 				
 				cursors = game.input.keyboard.createCursorKeys();
 			}
@@ -40,10 +40,10 @@
 					mario.rotation -= 0.05;				
 				}
 				else if(cursors.right.isDown === true){
-					mario.x += 1;				
+					mario.x += 1.5;				
 				}
 				else if(cursors.left.isDown === true && mario.x > 0){
-					mario.x -= 1;				
+					mario.x -= 1.5;				
 				}					
 			}
 			
