@@ -19,7 +19,7 @@
 			var mario;
 			var cursors;
 			
-			var moveButton;
+			var moveButton[4];
 
 			
 			function preload(){
@@ -33,6 +33,9 @@
 			
 			function create(){
 				//character = new Phaser.Rectangle(370, 270, 60, 60);
+				
+				cursors = game.input.keyboard.createCursorKeys();
+				
 				mario = game.add.sprite(100, 100, 'mario');
 				mario.anchor.setTo(1,1);
 				mario.y = 230;
@@ -43,7 +46,7 @@
 				moveButton[3] = game.add.sprite(50, 50, 'right');
 				
 				
-				cursors = game.input.keyboard.createCursorKeys();
+				
 			}
 			
 			function update(){
