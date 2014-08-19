@@ -20,6 +20,8 @@
 			var cursors;
 			
 			var up,down,left,right;
+			
+			var moveUp, moveDown, moveLeft, moveRight;
 
 			
 			function preload(){
@@ -40,12 +42,10 @@
 				mario.anchor.setTo(1,1);
 				
 				
-				up = game.add.sprite(680, 430, 'up');
-				down = game.add.sprite(680, 530, 'down');
-				left = game.add.sprite(630, 480, 'left');
-				right = game.add.sprite(730, 480, 'right');
-				
-				
+				up = game.add.button(680, 430, 'up',moveUp);
+				down = game.add.button(680, 530, 'down', moveDown);
+				left = game.add.button(630, 480, 'left', moveLeft);
+				right = game.add.button(730, 480, 'right', moveRight);			
 				
 			}
 			
@@ -64,9 +64,13 @@
 				}					
 			
 			}
-			
+						
 			function render(){
 				game.debug.geom(character,'#ffffff');
+			}
+			
+			function moveUp(){
+				mario.y=10;
 			}
 		};
 	</script>
