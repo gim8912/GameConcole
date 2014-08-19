@@ -62,7 +62,15 @@
 					}
 				}
 				else if(cursors.down.isDown === true){
-					mario.y += 1.5;				
+					mario.y += 1.5;		
+					if(cursors.right.isDown === true){
+						mario.y += 1.5;
+						mario.x += 1.5;				
+					}
+					else if(cursors.left.isDown === true && mario.x > 100){
+						mario.y += 1.5;
+						mario.x -= 1.5;				
+					}
 				}
 				
 				else if(cursors.right.isDown === true){
