@@ -25,9 +25,10 @@
 			}
 			
 			function create(){
-				character = new Phaser.Rectangle(370, 270, 60, 60);
+				//character = new Phaser.Rectangle(370, 270, 60, 60);
 				mario = game.add.sprite(100, 100, 'mario');
-				mario.anchor.setTo(350,250);
+				mario.anchor.setTo(1,1);
+				mario.y = 230;
 				
 				cursors = game.input.keyboard.createCursorKeys();
 			}
